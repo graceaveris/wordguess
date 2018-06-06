@@ -1,0 +1,19 @@
+
+
+body {
+	font-family: centurygothic;
+}
+
+li img {
+	max-width: 100%;
+}
+
+button {
+	width: 100px;
+	border: 1px solid black;
+	font-size: 20px;
+}
+
+#list-data li {
+	display: inline-block;
+	max-width: 200px;
