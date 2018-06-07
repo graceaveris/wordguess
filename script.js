@@ -19,6 +19,7 @@ function randomCountry() {
 	country = choices[i]; 
 
 	getTaggedPhotos(country);
+	header.innerHTML="Guess the Country";
 }
 
 //this function returns images based on the random counry selected
@@ -61,14 +62,23 @@ function matchChoice(event) {
     event.preventDefault();
   if (event.target.innerHTML == country) {
     console.log("match"); // this is working!
-    match = true;
     header.innerHTML = "Correct Guess!"
 } else {
-	header.innerHTML = "Try Again..."
+	header.innerHTML = "WRONG! The answer is " + country;
+  }
+
+  if (header.innerHTML != "Guess the Country") {
+  setTimeout(function() { 
+  	randomCountry(); }, 2500);
   }
 }
-
 randomCountry();
+
+
+
+//write a function that resets the board based on conditions
+
+// randomCountry();
 // console.log(country);
 // this function randomly selects an item from choices - added to main function
 
